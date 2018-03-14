@@ -23,6 +23,8 @@ int uart_putchar(char c, FILE* stream);
 //inicjalizacja wyswietlacza
 void lcdinit(void);
 
+void lcd_disable_cursor(void);
+
 void lcd_write_dataL(char* tab);
 
 //funkcja wysyłająca

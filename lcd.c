@@ -21,6 +21,10 @@ void lcdinit(void) {
 	lcd_write_instr(0x0F);
 }
 
+void lcd_disable_cursor(void){
+	lcd_write_instr(0xC);
+}
+
 int uart_putchar(char c, FILE *stream) {
 	lcd_write_data(c);
 	return 0;
