@@ -21,11 +21,13 @@ void lcdinit(void){
 	lcd_write_instr(0x0F);
 }
 
-void lcd_write_dataL(uint8_t* tab){
-	unsigned int len = strlen(tab);
+void lcd_write_dataL(char* tab){
 
-	for(unsigned int i=0;i<len;i++){
-		lcd_write_data(tab[i]);
+	/*for(unsigned int i=0;i<strlen(tab);i++){
+		lcd_write_data((uint8_t)tab[i]);
+	}*/
+	while(*tab!=0){
+		lcd_write_data(*(tab++));
 	}
 
 }
@@ -82,6 +84,7 @@ void lcd_set_xy(uint8_t r, uint8_t k){
 }
 
 void lcd_write_text_xy(uint8_t r, uint8_t k, char *text){
-
+	lcd_set_xy(r,k);
+	lcd_write_dataL(text);
 }
 

@@ -17,8 +17,7 @@ int main(void) {
 
 	char d[] = "Adrian jest krolem";
 	//lcd_write_dataL(d);
-	lcd_set_xy(1,4);
-	lcd_write_data('s');
+	lcd_write_text_xy(1,4, d);
 	while (1) {
 
 

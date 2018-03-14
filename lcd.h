@@ -20,7 +20,7 @@
 //inicjalizacja wyswietlacza
 void lcdinit(void);
 
-void lcd_write_dataL(uint8_t* tab);
+void lcd_write_dataL(char* tab);
 
 //funkcja wysyłająca
 void lcd_write_instr(uint8_t data);
