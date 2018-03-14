@@ -19,7 +19,7 @@ int main(void) {
 	//lcd_write_dataL(d);
 	//lcd_write_text_xy(1,4, d);//
 
-	fprintf(&lcdout, "Ala ma %d kotow", 5);
+	fprintf(&lcdout, "Ala ma %.1f kotow", 5.3f);
 	while (1) {
 
 
