@@ -77,7 +77,7 @@ void lcd_write_data(uint8_t data){
 }
 
 void lcd_set_xy(uint8_t r, uint8_t k){
-	lcd_write_instr(0x80+r + 0x40 * k);
+	lcd_write_instr(0x80+k + 0x40 * r);
 
 }
 
