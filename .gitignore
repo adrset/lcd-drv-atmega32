@@ -1,8 +1,7 @@
 *.o
-.lss
-.map
-.eep
-.d
-.elf
-.hex
-.gitignore
+*.lss
+*.map
+*.eep
+*.d
+*.elf
+*.hex
