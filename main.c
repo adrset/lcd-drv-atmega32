@@ -10,14 +10,16 @@
 #include <avr/io.h>
 #include "lcd.h"
 
-
+FILE lcdout = FDEV_SETUP_STREAM(uart_putchar, NULL, _FDEV_SETUP_WRITE);
 
 int main(void) {
 	lcdinit();
 
-	char d[] = "Adrian jest krolem";
+	//char d[] = "Adrian jest krolem";
 	//lcd_write_dataL(d);
-	lcd_write_text_xy(1,4, d);
+	//lcd_write_text_xy(1,4, d);//
+
+	fprintf(&lcdout, "Ala ma %d kotow", 5);
 	while (1) {
 
 

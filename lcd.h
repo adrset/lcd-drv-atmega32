@@ -9,12 +9,15 @@
 #define LCD_H_
 
 #include <avr/io.h>
+#include <stdio.h>
 
 // For our use
 #define LCD_PORT PORTA
 #define LCD_E 3
 #define LCD_RS 2
 #define LCD_DDR DDRA
+
+int uart_putchar(char c, FILE* stream);
 
 
 //inicjalizacja wyswietlacza
